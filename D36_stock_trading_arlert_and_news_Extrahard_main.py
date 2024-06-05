@@ -30,6 +30,9 @@ def get_news(num):
     url1=aritle1['url']
     return (f'Headline: {headline1}\n\nBrief: {brief1}\n\nReport by: {press1}\n\nMore info: {url1}')
 
+    ## if going with first 3 articles, then loop through the formatted list to send each article:
+    # three_article = news_data['articles'][:3]
+    # formatted_article_list = [f"Headline: {article['title']}. \nBrief:{article['description']" for article in three_articles]
 
 ## STEP 3: Use https://www.twilio.com
 # Send a seperate message with the percentage change and each article's title and description to your phone number.
@@ -61,12 +64,6 @@ def telegram_bot_sendtext(message, token,id):
 ## STEP 1: Use https://www.alphavantage.co
 # When STOCK price increase/decreases by 5% between yesterday and the day before yesterday then print("Get News").
 # i'm using TIME_SERIES_DAILY API
-# parameter={ ##compact returns only the latest 100 data points; full returns the full-length time series of 20+ years of historical data
-#     'outputsize': 'compact',
-#     'function': 'TIME_SERIES_DAILY',
-#     'symbol': STOCK,
-#     'apikey': MY_ALPHA_API_KEY,
-# }
 
 alpha_response = requests.get(url=f'https://www.alphavantage.co/query', params=parameter)
 alpha_response.raise_for_status()
@@ -92,7 +89,9 @@ else:
     trend =0
 
 if abs(close_diffe) > 0.01:
-    num_message = (f'TSLA: {symbol[trend]}{round(close_diffe*100,2)}% \n\nTime: from {day2_date} to {day1_date}\n\n')
+    num_message = (f'TSLA: {symbol[trend]}{round(close_diffe*100,2)}%; difference:  {round(close_diffe,2)} \n\nTime: from {day2_date} to {day1_date}\n\n')
+
     pick=random.randint(0,5)
     news_message = get_news(pick)
+
     telegram_bot_sendtext(message=num_message+news_message, token=bot_token, id=chat_id)
