@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3ebbf6f3-9b2f-4862-b54e-8f33b8f8c533" name="Changes" comment="06/05">
-      <change beforePath="$PROJECT_DIR$/../D36-37_stock-trading-alert_and_news_Extrahard/.idea/D36_stock-trading-alert_and_news_Extrahard.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../D36-37_stock-trading-alert_and_news_Extrahard/.idea/D36-37_stock_and_Pixela.iml" afterDir="false" />
-    </list>
+    <list default="true" id="3ebbf6f3-9b2f-4862-b54e-8f33b8f8c533" name="Changes" comment="06/05" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -198,7 +196,23 @@
       <option name="project" value="LOCAL" />
       <updated>1717577798974</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="06/05">
+      <option name="closed" value="true" />
+      <created>1717577897522</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1717577897522</updated>
+    </task>
+    <task id="LOCAL-00006" summary="06/05">
+      <option name="closed" value="true" />
+      <created>1717577922447</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1717577922447</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
